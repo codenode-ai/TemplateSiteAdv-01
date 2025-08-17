@@ -1,0 +1,126 @@
+Criar um site institucional moderno e atrativo para o escritório Vilmondes José da Rosa – Advocacia Empresarial, destacando credibilidade, sofisticação e proximidade com clientes empresariais. O site deve ser responsivo, elegante, interativo e facilitar contato direto via WhatsApp.
+
+2. Público-Alvo
+
+Pequenas e médias empresas.
+
+Profissionais liberais.
+
+Pessoas físicas com demandas trabalhistas específicas.
+
+3. Estrutura do Site
+3.1. Cabeçalho (Header)
+
+Logotipo minimalista.
+
+Menu de navegação fixo com animações de hover (sublinhado suave ou transição de cor dourada).
+
+Ícones de redes sociais no topo direito.
+
+3.2. Hero (Seção Inicial)
+
+Fundo escuro com degradê ou imagem em overlay.
+
+Texto animado com efeito de fade-in ou slide-up.
+
+Botão dourado “Fale com o Advogado” com hover de brilho.
+
+Possível microanimação no fundo (gradiente animado, partículas sutis ou efeito parallax).
+
+3.3. Sobre o Escritório
+
+Texto com efeito de fade-in on scroll.
+
+Destaque para o endereço e missão.
+
+3.4. Áreas de Atuação
+
+Cards modernos com ícones.
+
+Efeitos de hover: elevação (shadow-lg) + borda dourada ao passar o mouse.
+
+Transição suave com Tailwind (transition, duration-300, ease-in-out).
+
+3.5. O Advogado
+
+Foto com borda dourada animada no hover.
+
+Mini biografia aparecendo em fade-up ao rolar a página.
+
+3.6. Diferenciais
+
+Ícones com cores douradas.
+
+Efeito de scale-up no hover.
+
+Layout em grid responsivo.
+
+3.7. Depoimentos
+
+Carrossel suave (com auto-play e setas de navegação).
+
+Animação de entrada slide-in para cada depoimento.
+
+3.8. Contato
+
+Formulário estilizado com campos escuros e borda dourada no foco.
+
+Botão de envio com hover animado (hover:scale-105 hover:bg-yellow-500).
+
+3.9. Rodapé
+
+Links rápidos com transições de cor no hover.
+
+Ícones de redes sociais com animação de rotação suave ao passar o mouse.
+
+3.10. Botão de WhatsApp Flutuante
+
+Ícone oficial verde (#25D366).
+
+Fixado no canto inferior direito.
+
+Animação de pulse intermitente para chamar atenção.
+
+4. Requisitos Visuais
+
+Paleta de Cores:
+
+Fundo: Preto grafite (#121212) ou cinza escuro (#1A1A1A).
+
+Destaques e botões: Amarelo dourado (#FFD700).
+
+Texto principal: Branco (#FFFFFF).
+
+Texto secundário: Cinza claro (#CCCCCC).
+
+Tipografia:
+
+Títulos: serifada (Merriweather, Playfair Display).
+
+Corpo: sem serifa (Lato, Roboto).
+
+5. Requisitos Funcionais
+
+Responsividade total (desktop, tablet, mobile).
+
+Formulário de contato integrado ao e-mail do escritório.
+
+SEO básico (títulos, descrições, URLs).
+
+SSL ativo (HTTPS).
+
+Botão flutuante WhatsApp em todas as páginas.
+
+Animações de entrada controladas por Tailwind classes e libs complementares (ex.: AOS – Animate On Scroll).
+
+Efeitos de hover aplicados com Tailwind (hover:, transition, ease-in-out).
+
+6. Stack Tecnológica
+
+Frontend: HTML5, Tailwind CSS, JavaScript.
+
+Animações: Tailwind Utilities + AOS (Animate On Scroll) ou Framer Motion (se houver uso de React).
+
+Hospedagem: Vercel, Netlify ou similar.
+
+Integrações: WhatsApp API (link direto wa.me).
