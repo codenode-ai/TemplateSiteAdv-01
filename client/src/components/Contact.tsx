@@ -1,0 +1,265 @@
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
+
+export default function Contact() {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    nome: "",
+    empresa: "",
+    email: "",
+    telefone: "",
+    area: "",
+    mensagem: ""
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Basic form validation
+    if (!formData.nome || !formData.email || !formData.mensagem) {
+      toast({
+        title: "Campos obrigatórios",
+        description: "Por favor, preencha pelo menos nome, e-mail e mensagem.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Mensagem enviada!",
+          description: "Obrigado pela sua mensagem! Entraremos em contato em breve.",
+        });
+        
+        // Reset form
+        setFormData({
+          nome: "",
+          empresa: "",
+          email: "",
+          telefone: "",
+          area: "",
+          mensagem: ""
+        });
+      } else {
+        throw new Error("Falha ao enviar mensagem");
+      }
+    } catch (error) {
+      toast({
+        title: "Erro ao enviar",
+        description: "Ocorreu um erro ao enviar sua mensagem. Tente novamente.",
+        variant: "destructive",
+      });
+    }
+  };
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  return (
+    <section id="contato" className="py-20 bg-graphite">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16 animate-slide-up">
+          <h2 className="font-serif text-4xl font-bold mb-6 text-golden" data-testid="text-contact-title">
+            Entre em Contato
+          </h2>
+          <p className="text-xl text-light-gray max-w-3xl mx-auto" data-testid="text-contact-description">
+            Estamos prontos para atender suas necessidades jurídicas. Entre em contato e solicite uma consulta
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Contact Form */}
+          <div className="animate-slide-up">
+            <form onSubmit={handleSubmit} className="space-y-6" data-testid="form-contact">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-medium text-light-gray mb-2">Nome *</label>
+                  <Input
+                    type="text"
+                    value={formData.nome}
+                    onChange={(e) => handleInputChange("nome", e.target.value)}
+                    className="bg-dark-gray border-golden/20 text-white placeholder-light-gray focus:border-golden"
+                    placeholder="Seu nome completo"
+                    data-testid="input-nome"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-light-gray mb-2">Empresa</label>
+                  <Input
+                    type="text"
+                    value={formData.empresa}
+                    onChange={(e) => handleInputChange("empresa", e.target.value)}
+                    className="bg-dark-gray border-golden/20 text-white placeholder-light-gray focus:border-golden"
+                    placeholder="Nome da empresa"
+                    data-testid="input-empresa"
+                  />
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-medium text-light-gray mb-2">E-mail *</label>
+                  <Input
+                    type="email"
+                    value={formData.email}
+                    onChange={(e) => handleInputChange("email", e.target.value)}
+                    className="bg-dark-gray border-golden/20 text-white placeholder-light-gray focus:border-golden"
+                    placeholder="seu@email.com"
+                    data-testid="input-email"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-light-gray mb-2">Telefone</label>
+                  <Input
+                    type="tel"
+                    value={formData.telefone}
+                    onChange={(e) => handleInputChange("telefone", e.target.value)}
+                    className="bg-dark-gray border-golden/20 text-white placeholder-light-gray focus:border-golden"
+                    placeholder="(00) 00000-0000"
+                    data-testid="input-telefone"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-light-gray mb-2">Área de Interesse</label>
+                <Select value={formData.area} onValueChange={(value) => handleInputChange("area", value)}>
+                  <SelectTrigger className="bg-dark-gray border-golden/20 text-white focus:border-golden" data-testid="select-area">
+                    <SelectValue placeholder="Selecione uma área" />
+                  </SelectTrigger>
+                  <SelectContent className="bg-dark-gray border-golden/20">
+                    <SelectItem value="empresarial">Direito Empresarial</SelectItem>
+                    <SelectItem value="trabalhista">Direito Trabalhista</SelectItem>
+                    <SelectItem value="contratos">Contratos e Negociações</SelectItem>
+                    <SelectItem value="compliance">Compliance Jurídico</SelectItem>
+                    <SelectItem value="tributario">Direito Tributário</SelectItem>
+                    <SelectItem value="recuperacao">Recuperação Judicial</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-light-gray mb-2">Mensagem *</label>
+                <Textarea
+                  rows={5}
+                  value={formData.mensagem}
+                  onChange={(e) => handleInputChange("mensagem", e.target.value)}
+                  className="bg-dark-gray border-golden/20 text-white placeholder-light-gray focus:border-golden resize-none"
+                  placeholder="Descreva sua necessidade jurídica ou dúvida..."
+                  data-testid="textarea-mensagem"
+                />
+              </div>
+
+              <Button
+                type="submit"
+                className="w-full bg-golden text-graphite font-semibold hover:bg-yellow-500 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                data-testid="button-submit"
+              >
+                <Mail className="w-5 h-5 mr-2" />
+                Enviar Mensagem
+              </Button>
+            </form>
+          </div>
+
+          {/* Contact Information */}
+          <div className="animate-slide-up" style={{ animationDelay: "0.2s" }}>
+            <div className="bg-dark-gray p-8 rounded-xl border border-golden/20" data-testid="card-contact-info">
+              <h3 className="font-serif text-2xl font-bold mb-6 text-golden">Informações de Contato</h3>
+
+              <div className="space-y-6">
+                <div className="flex items-start" data-testid="contact-address">
+                  <div className="w-12 h-12 bg-golden/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                    <MapPin className="w-6 h-6 text-golden" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-white mb-1">Endereço</h4>
+                    <p className="text-light-gray">
+                      Rua das Flores, 123, Sala 456<br />
+                      Centro - Florianópolis/SC<br />
+                      CEP: 88010-000
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start" data-testid="contact-phone">
+                  <div className="w-12 h-12 bg-golden/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                    <Phone className="w-6 h-6 text-golden" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-white mb-1">Telefone</h4>
+                    <p className="text-light-gray">
+                      (48) 3222-3333<br />
+                      (48) 99999-8888
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start" data-testid="contact-email">
+                  <div className="w-12 h-12 bg-golden/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                    <Mail className="w-6 h-6 text-golden" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-white mb-1">E-mail</h4>
+                    <p className="text-light-gray">
+                      contato@vjradvocacia.com.br<br />
+                      vilmondes@vjradvocacia.com.br
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start" data-testid="contact-hours">
+                  <div className="w-12 h-12 bg-golden/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                    <Clock className="w-6 h-6 text-golden" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-white mb-1">Horário de Atendimento</h4>
+                    <p className="text-light-gray">
+                      Segunda a Sexta: 08:00 às 18:00<br />
+                      Sábado: 08:00 às 12:00
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 pt-6 border-t border-golden/20">
+                <h4 className="font-semibold text-white mb-4">Nos siga nas redes sociais</h4>
+                <div className="flex space-x-4" data-testid="social-links">
+                  <a href="#" className="w-10 h-10 bg-golden/10 rounded-lg flex items-center justify-center text-golden hover:bg-golden hover:text-graphite transition-all duration-300">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                  </a>
+                  <a href="#" className="w-10 h-10 bg-golden/10 rounded-lg flex items-center justify-center text-golden hover:bg-golden hover:text-graphite transition-all duration-300">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                  </a>
+                  <a href="#" className="w-10 h-10 bg-golden/10 rounded-lg flex items-center justify-center text-golden hover:bg-golden hover:text-graphite transition-all duration-300">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
