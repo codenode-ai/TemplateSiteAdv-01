@@ -54,7 +54,7 @@ export default function LawyerProfile() {
           </div>
 
           <div className="animate-slide-up" style={{ animationDelay: "0.2s" }}>
-            <div className="relative group">
+            <div className="relative group mb-8">
               <img
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                 alt="Dr. Vilmondes José da Rosa - Advogado"
@@ -62,14 +62,14 @@ export default function LawyerProfile() {
                 data-testid="img-lawyer-portrait"
               />
               <div className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-golden transition-all duration-500"></div>
-            </div>
-
-            {/* Achievements */}
-            <div className="absolute -bottom-8 -right-8 bg-dark-gray p-6 rounded-xl border border-golden/20 shadow-2xl" data-testid="card-achievement">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-golden">15+</div>
-                <div className="text-sm text-light-gray">Anos de</div>
-                <div className="text-sm text-light-gray">Experiência</div>
+              
+              {/* Achievements Badge - positioned on the image */}
+              <div className="absolute -bottom-4 -right-4 bg-dark-gray p-4 rounded-xl border border-golden/20 shadow-2xl" data-testid="card-achievement">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-golden">15+</div>
+                  <div className="text-xs text-light-gray">Anos de</div>
+                  <div className="text-xs text-light-gray">Experiência</div>
+                </div>
               </div>
             </div>
           </div>
