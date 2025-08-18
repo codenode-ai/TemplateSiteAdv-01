@@ -20,7 +20,7 @@ export default function About() {
             </h2>
             
             <p className="text-lg text-light-gray mb-6 leading-relaxed" data-testid="text-about-description">
-              O escritório <strong className="text-white">Vilmondes José da Rosa – Advocacia Empresarial</strong> atua há mais de uma década no mercado jurídico, oferecendo soluções especializadas em direito empresarial e trabalhista.
+              O escritório <strong className="text-white">Vilmondes José da Rosa – Advocacia Empresarial</strong> atua há mais de 15 anos no mercado jurídico, oferecendo soluções especializadas em direito empresarial e trabalhista.
             </p>
             
             <p className="text-lg text-light-gray mb-6 leading-relaxed">

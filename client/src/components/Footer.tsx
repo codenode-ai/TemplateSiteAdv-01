@@ -76,14 +76,14 @@ export default function Footer() {
               <div className="flex items-start">
                 <MapPin className="w-5 h-5 text-golden mr-2 mt-1 flex-shrink-0" />
                 <span>
-                  Rua das Flores, 123, Sala 456<br />
-                  Centro - Florianópolis/SC
+                  Av. Afonso Pena, 247, Sala 01<br />
+                  Centro - Centralina-MG
                 </span>
               </div>
               
               <div className="flex items-center">
                 <Phone className="w-5 h-5 text-golden mr-2" />
-                <span>(48) 3222-3333</span>
+                <span>(34) 99900-7944</span>
               </div>
               
               <div className="flex items-center">
@@ -96,7 +96,7 @@ export default function Footer() {
 
         <div className="border-t border-golden/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-light-gray text-sm mb-4 md:mb-0" data-testid="footer-copyright">
-            © 2024 Vilmondes José da Rosa - Advocacia Empresarial. Todos os direitos reservados.
+            © 2025 Vilmondes José da Rosa - Advocacia Empresarial. Todos os direitos reservados.
           </div>
           
           <div className="flex space-x-6 text-light-gray text-sm" data-testid="footer-legal-links">
