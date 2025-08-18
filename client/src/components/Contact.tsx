@@ -189,8 +189,8 @@ export default function Contact() {
                   <div>
                     <h4 className="font-semibold text-white mb-1">Endereço</h4>
                     <p className="text-light-gray">
-                      Rua das Flores, 123, Sala 456<br />
-                      Centro - Florianópolis/SC<br />
+                      Av. Afonso Pena, 247, Sala 01<br />
+                      Centro - Centralina-MG<br />
                       CEP: 88010-000
                     </p>
                   </div>
@@ -203,8 +203,8 @@ export default function Contact() {
                   <div>
                     <h4 className="font-semibold text-white mb-1">Telefone</h4>
                     <p className="text-light-gray">
-                      (48) 3222-3333<br />
-                      (48) 99999-8888
+                      (34) 3267-3333<br />
+                      (34) 99900-7944
                     </p>
                   </div>
                 </div>
