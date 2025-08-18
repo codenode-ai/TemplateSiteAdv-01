@@ -34,7 +34,7 @@ export default function About() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-white">Expertise Comprovada</h3>
-                  <p className="text-light-gray text-sm">Mais de 10 anos de experiência</p>
+                  <p className="text-light-gray text-sm">Mais de 15 anos de experiência</p>
                 </div>
               </div>
               
