@@ -7,7 +7,7 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-up">
             <img
-              src="https://ibb.co/Hp23C3Zq"
+              src="https://ibb.co/Hp23C3Zq/office.jpg"
               alt="Escritório moderno de advocacia"
               className="rounded-xl shadow-2xl w-full h-auto"
               data-testid="img-office"
