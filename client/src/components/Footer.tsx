@@ -27,8 +27,8 @@ export default function Footer() {
             </p>
             
             <div className="text-light-gray text-sm">
-              <p>OAB/SC 12345</p>
-              <p>CNPJ: 12.345.678/0001-90</p>
+              <p>OAB/SC 00000</p>
+              <p>CNPJ: 00.000.000/0001-90</p>
             </div>
           </div>
 
@@ -96,7 +96,7 @@ export default function Footer() {
 
         <div className="border-t border-golden/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-light-gray text-sm mb-4 md:mb-0" data-testid="footer-copyright">
-            © 2025 Vilmondes José da Rosa - Advocacia Empresarial. Conteúdo fictício.
+            © 2025 Vilmondes José da Rosa - Advocacia Empresarial.
           </div>
           
           <div className="flex space-x-6 text-light-gray text-sm" data-testid="footer-legal-links">

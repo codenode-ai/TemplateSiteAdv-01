@@ -203,8 +203,8 @@ export default function Contact() {
                   <div>
                     <h4 className="font-semibold text-white mb-1">Telefone</h4>
                     <p className="text-light-gray">
-                      (34) 3267-3333<br />
-                      (34) 99900-7944
+                      (34) 2222-3333<br />
+                      (34) 99999-9999
                     </p>
                   </div>
                 </div>
