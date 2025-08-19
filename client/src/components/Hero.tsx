@@ -59,6 +59,10 @@ export default function Hero() {
           </button>
         </div>
 
+        <p className="text-xs text-light-gray/60 mt-6 animate-slide-up" style={{ animationDelay: "0.9s" }}>
+          * Conteúdo do site é fictício e criado apenas para fins demonstrativos
+        </p>
+
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <button 
             onClick={() => scrollToSection("sobre")}
