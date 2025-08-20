@@ -7,7 +7,7 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-up">
             <img
-              src="https://i.ibb.co/yBR7p72q/Escritorio-Vilmondes.png"
+              src="https://i.ibb.co/RGMWh1Zh/Escrit-rio-Dr-Valter-Jos-Rezende.png"
               alt="Escritório moderno de advocacia"
               className="rounded-xl shadow-2xl w-full h-auto"
               data-testid="img-office"
@@ -20,7 +20,7 @@ export default function About() {
             </h2>
             
             <p className="text-lg text-light-gray mb-6 leading-relaxed" data-testid="text-about-description">
-              O escritório <strong className="text-white">Vilmondes José da Rosa – Advocacia Empresarial</strong> atua há mais de 15 anos no mercado jurídico, oferecendo soluções especializadas em direito empresarial e trabalhista.
+              O escritório <strong className="text-white">Valter José Rezende – Advocacia Empresarial</strong> atua há mais de 15 anos no mercado jurídico, oferecendo soluções especializadas em direito empresarial e trabalhista.
             </p>
             
             <p className="text-lg text-light-gray mb-6 leading-relaxed">

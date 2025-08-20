@@ -17,7 +17,7 @@ export default function Footer() {
             <div className="flex items-center mb-4">
               <div className="text-2xl font-serif font-bold text-golden mr-3">VJR</div>
               <div>
-                <div className="text-lg font-serif font-bold text-white">Vilmondes José da Rosa</div>
+                <div className="text-lg font-serif font-bold text-white">Valter José Rezende</div>
                 <div className="text-sm text-light-gray">Advocacia Empresarial</div>
               </div>
             </div>
@@ -96,7 +96,7 @@ export default function Footer() {
 
         <div className="border-t border-golden/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-light-gray text-sm mb-4 md:mb-0" data-testid="footer-copyright">
-            © 2025 Vilmondes José da Rosa - Advocacia Empresarial.
+            © 2025 Valter José Rezende - Advocacia Empresarial.
           </div>
           
           <div className="flex items-center space-x-6">

@@ -9,7 +9,7 @@ export default function LawyerProfile() {
             </h2>
             
             <h3 className="font-serif text-2xl font-semibold mb-4 text-white" data-testid="text-lawyer-name">
-              Dr. Vilmondes José da Rosa
+              Dr. Valter José Rezende
             </h3>
             
             <p className="text-lg text-light-gray mb-6 leading-relaxed" data-testid="text-lawyer-bio-1">
@@ -56,7 +56,7 @@ export default function LawyerProfile() {
           <div className="animate-slide-up" style={{ animationDelay: "0.2s" }}>
             <div className="relative group mb-8">
               <img
-                src="https://i.ibb.co/S49PkSmz/Dr-Vilmondes-Jos-da-Rosa.jpg"
+                src="https://i.ibb.co/nNFVk2Jj/Dr-Valter-Jos-Rezende.png"
                 alt="Dr. Vilmondes José da Rosa - Advogado"
                 className="rounded-xl shadow-2xl w-full h-auto group-hover:scale-105 transition-transform duration-500"
                 data-testid="img-lawyer-portrait"

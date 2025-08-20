@@ -217,7 +217,7 @@ export default function Contact() {
                     <h4 className="font-semibold text-white mb-1">E-mail</h4>
                     <p className="text-light-gray">
                       contato@vjradvocacia.com.br<br />
-                      vilmondes@vjradvocacia.com.br
+                      valter@vjradvocacia.com.br
                     </p>
                   </div>
                 </div>
