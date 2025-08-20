@@ -17,7 +17,7 @@ export default function LawyerProfile() {
             </p>
             
             <p className="text-lg text-light-gray mb-6 leading-relaxed" data-testid="text-lawyer-bio-2">
-              Reconhecido por sua atuação estratégica e resultados expressivos na defesa dos interesses empresariais, Dr. Vilmondes combina conhecimento técnico profundo com uma abordagem humanizada no atendimento aos clientes.
+              Reconhecido por sua atuação estratégica e resultados expressivos na defesa dos interesses empresariais, Dr. Valter combina conhecimento técnico profundo com uma abordagem humanizada no atendimento aos clientes.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">

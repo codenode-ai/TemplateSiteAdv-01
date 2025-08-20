@@ -5,19 +5,19 @@ const testimonials = [
   {
     name: "Carlos Eduardo Silva",
     position: "CEO - Silva & Associados Ltda.",
-    content: "O Dr. Vilmondes transformou a gestão jurídica da nossa empresa. Sua expertise em direito empresarial e a rapidez na resolução de questões complexas nos deram a segurança que precisávamos para expandir nossos negócios. Recomendo sem hesitação.",
+    content: "O Dr. Valter transformou a gestão jurídica da nossa empresa. Sua expertise em direito empresarial e a rapidez na resolução de questões complexas nos deram a segurança que precisávamos para expandir nossos negócios. Recomendo sem hesitação.",
     rating: 5
   },
   {
     name: "Marina Oliveira Santos",
     position: "Diretora Jurídica - Tecnologia Avançada S.A.",
-    content: "Trabalhar com o Dr. Vilmondes foi uma experiência excepcional. Ele demonstrou profundo conhecimento em compliance e nos ajudou a implementar políticas que fortaleceram nossa governança corporativa. Profissionalismo e qualidade incomparáveis.",
+    content: "Trabalhar com o Dr. Valter foi uma experiência excepcional. Ele demonstrou profundo conhecimento em compliance e nos ajudou a implementar políticas que fortaleceram nossa governança corporativa. Profissionalismo e qualidade incomparáveis.",
     rating: 5
   },
   {
     name: "Roberto Ferreira",
     position: "Proprietário - Construtora Ferreira & Cia",
-    content: "O atendimento do Dr. Vilmondes superou todas as expectativas. Ele resolveu uma questão trabalhista complexa que estava comprometendo nossos projetos. Sua dedicação e expertise fizeram toda a diferença. Agora temos um parceiro jurídico de confiança.",
+    content: "O atendimento do Dr. Valter superou todas as expectativas. Ele resolveu uma questão trabalhista complexa que estava comprometendo nossos projetos. Sua dedicação e expertise fizeram toda a diferença. Agora temos um parceiro jurídico de confiança.",
     rating: 5
   }
 ];
