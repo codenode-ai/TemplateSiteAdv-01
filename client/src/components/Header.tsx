@@ -33,14 +33,14 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center" data-testid="logo">
             <div className="text-2xl font-serif font-bold text-golden">VJR</div>
-            <div className="ml-3 hidden sm:block">
-              <div className="text-lg font-serif font-bold">Valter José Rezende</div>
+            <div className="ml-4 hidden sm:block">
+              <div className="text-lg font-serif font-bold">Vilmondes José da Rosa</div>
               <div className="text-sm text-light-gray">Advocacia Empresarial</div>
             </div>
           </div>
 
           {/* Navigation */}
-          <nav className="hidden lg:flex space-x-8" data-testid="nav-desktop">
+          <nav className="hidden lg:flex space-x-10" data-testid="nav-desktop">
             {[
               { href: "inicio", label: "Início" },
               { href: "sobre", label: "Sobre" },
