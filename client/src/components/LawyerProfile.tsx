@@ -56,7 +56,7 @@ export default function LawyerProfile() {
           <div className="animate-slide-up" style={{ animationDelay: "0.2s" }}>
             <div className="relative group mb-8">
               <img
-                src="https://i.ibb.co/nNFVk2Jj/Dr-Valter-Jos-Rezende.png"
+                src="https://i.ibb.co/wqMGrr7/Dr-Valter-Jos-Rezende.png"
                 alt="Dr. Vilmondes José da Rosa - Advogado"
                 className="rounded-xl shadow-2xl w-full h-auto group-hover:scale-105 transition-transform duration-500"
                 data-testid="img-lawyer-portrait"
