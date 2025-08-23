@@ -34,7 +34,7 @@ export default function Header() {
           <div className="flex items-center" data-testid="logo">
             <div className="text-2xl font-serif font-bold text-golden">VJR</div>
             <div className="ml-4 hidden sm:block">
-              <div className="text-lg font-serif font-bold">Vilmondes José da Rosa</div>
+              <div className="text-lg font-serif font-bold">Valter José Rezende</div>
               <div className="text-sm text-light-gray">Advocacia Empresarial</div>
             </div>
           </div>
