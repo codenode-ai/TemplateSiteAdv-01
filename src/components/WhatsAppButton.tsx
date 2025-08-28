@@ -4,7 +4,7 @@ export default function WhatsAppButton() {
   const [showTooltip, setShowTooltip] = useState(false);
   
   const phoneNumber = "554891974158";
-  const message = "Olá! Gostaria de uma consulta jurídica.";
+  const message = "Gostei do modelo, quero contratar um site!";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
