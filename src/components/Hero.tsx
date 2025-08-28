@@ -1,4 +1,4 @@
-import { MessageCircle, ArrowDown } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 export default function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -62,16 +62,6 @@ export default function Hero() {
         <p className="text-xs text-light-gray/60 mt-6 animate-slide-up" style={{ animationDelay: "0.9s" }}>
           * Conteúdo do site é fictício e criado apenas para fins demonstrativos
         </p>
-
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <button 
-            onClick={() => scrollToSection("sobre")}
-            className="text-golden/70 hover:text-golden transition-colors duration-300"
-            data-testid="button-scroll-down"
-          >
-            <ArrowDown className="w-6 h-6" />
-          </button>
-        </div>
       </div>
     </section>
   );
